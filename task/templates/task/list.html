@@ -1,6 +1,7 @@
 <h2>To do List</h2>
 <form method = "POST" action="/">
-    {{form}}
+    {% csrf_token%}
+    {{form.title}}
     <input type="submit" name="create Task">
 </form>
 {%for task in tasks %}
