@@ -20,6 +20,8 @@ def index(request):
 
 def updateTask(request, pk):
     task=Task.objects.get(id=pk)
-    form = TaskForm(instance=task)
 
-    return render(request, 'task/update_task.html')
+    form = TaskForm(instance=task)
+   
+
+    return render(request, 'task/update_task.html', context)
